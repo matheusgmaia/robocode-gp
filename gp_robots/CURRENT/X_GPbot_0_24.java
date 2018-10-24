@@ -1,0 +1,38 @@
+package sampleex;
+import robocode.*;
+import robocode.util.Utils;
+import java.awt.Color;
+
+
+public class X_GPbot_0_24 extends AdvancedRobot {
+
+	public void run() {
+
+setAdjustGunForRobotTurn(true);
+
+		setColors(Color.red,Color.blue,Color.green);
+		while(true) {
+			turnGunRight(Double.POSITIVE_INFINITY);
+		}
+
+	}
+	public void onScannedRobot(ScannedRobotEvent e) {
+
+ // --- PHENOME 1 ---
+		setAhead((Math.abs((Math.min(((((0.500095852557769) * ((Math.sin((e.getVelocity()))) - (getGunTurnRemainingRadians()))) > ((Math.asin(((Math.random()) * -1))) / (e.getBearingRadians())) ? ((Math.max((Math.max((getVelocity()), (getHeight()))), (0.001))) - (Math.min(((Math.random()*2 - 1) / (Math.random()*2 - 1)), (Math.asin((getRadarHeadingRadians())))))) : (Math.PI)) > ((Math.random()) + (Math.random())) ? (Math.asin((e.getEnergy()))) : (e.getBearingRadians())), ((getGunHeadingRadians()) > (Math.min((((Math.max((Math.random()), (getHeading()))) / (Math.min((Math.random()*2 - 1), (Math.random())))) + ((Math.min((e.getVelocity()), (0.12335504900905969))) > (Math.acos((getRadarTurnRemainingRadians()))) ? ((Math.floor((Math.random()*10))) / (getY())) : (Math.max((e.getBearingRadians()), (Math.random()*2 - 1))))), (0.8710304433010959))) ? (((Math.cos((0.001))) > 0 ? (getDistanceRemaining()) : (e.getBearingRadians())) > (e.getVelocity()) ? ((Math.floor((Math.random()*10))) * (0.001)) : ((getWidth()) - (((e.getEnergy()) * -1) + (e.getVelocity())))) : (0.08032304453638528)))))));
+
+ // --- PHENOME 2 ---
+		setTurnRight((Math.acos(((Math.min((getGunHeadingRadians()), (Math.acos((((getEnergy()) == ((Math.random()*2 - 1) == (Math.random()) ? (Math.PI) : (0.13475541570433547)) ? (e.getVelocity()) : ((getY()) * -1)) == (getVelocity()) ? (getHeight()) : (((getX()) * (Math.PI)) + ((e.getHeadingRadians()) * (Math.random()*2 - 1)))))))) + ((Math.sin(((((Math.random()*2 - 1) / (e.getHeadingRadians())) * (Math.max((Math.PI), (Math.random())))) / (getWidth())))) / (0.001))))));
+
+ // --- PHENOME 3 ---
+		setTurnGunRight((((((getEnergy()) * -1) + (Math.max((((Math.min((Math.random()*2 - 1), (Math.random()))) == (Math.random()*2 - 1) ? (0.49671522102277643) : ((getY()) - (e.getVelocity()))) * -1), (e.getEnergy())))) == ((getHeading()) - ((Math.floor((Math.random()*10))) - (Math.max((Math.random()), (((getRadarHeadingRadians()) * (Math.floor((Math.random()*10)))) / (Math.max((e.getDistance()), (getY())))))))) ? ((((Math.min((Math.min((getRadarHeadingRadians()), (getGunTurnRemainingRadians()))), ((0.38498514543190065) == (getHeight()) ? (Math.random()) : (getHeight())))) * (Math.random()*2 - 1)) - (Math.min((getX()), (((getGunTurnRemainingRadians()) + (Math.floor((Math.random()*10)))) / ((e.getDistance()) > (Math.random()*2 - 1) ? (Math.random()) : (0.8389754501124957)))))) + ((Math.max((Math.toRadians((Math.PI))), ((getHeight()) - (getDistanceRemaining())))) == (Math.sin((Math.max((getDistanceRemaining()), ((Math.random()) * (getX())))))) ? ((Math.max(((getX()) == (getVelocity()) ? (getHeading()) : (getGunHeadingRadians())), ((Math.floor((Math.random()*10))) / (Math.random())))) > (((0.552499718456086) / (getX())) == (Math.min((getHeight()), (getGunHeadingRadians()))) ? (e.getVelocity()) : ((Math.floor((Math.random()*10))) / (getVelocity()))) ? (Math.abs((getHeading()))) : (((0.5352966576007623) + (Math.PI)) == (Math.toRadians((Math.floor((Math.random()*10))))) ? (Math.PI) : ((0.2579399630987096) * (getGunHeadingRadians())))) : (Math.max(((getGunHeadingRadians()) + ((Math.random()*2 - 1) > 0 ? (e.getBearingRadians()) : (getX()))), (Math.cos((getHeight()))))))) : ((((Math.toRadians((Math.random()*2 - 1))) - (Math.random()*2 - 1)) * (getEnergy())) == ((Math.random()*2 - 1) + (((0.001) + ((Math.PI) > (getHeadingRadians()) ? (e.getDistance()) : (getVelocity()))) > ((Math.random()) + (Math.min((getGunTurnRemainingRadians()), (0.32198935223967196)))) ? ((e.getEnergy()) + (getY())) : (((Math.random()*2 - 1) * (getGunTurnRemainingRadians())) > 0 ? (Math.min((0.001), (0.7878838815635734))) : ((getRadarHeadingRadians()) / (getY()))))) ? (Math.acos((getRadarHeadingRadians()))) : (Math.min((Math.abs((0.001))), ((0.001) / ((Math.max((0.001), (getWidth()))) / ((getWidth()) + (getHeading())))))))) * (((e.getVelocity()) == ((getX()) / (Math.asin((Math.toRadians(((0.001) - (0.001))))))) ? (0.5173328153156879) : (((Math.floor((Math.random()*10))) > (Math.random()) ? (getX()) : (Math.acos(((getVelocity()) * (Math.floor((Math.random()*10))))))) > 0 ? (e.getBearingRadians()) : (Math.asin(((Math.max((0.001), (Math.random()*2 - 1))) + ((getWidth()) / (getY()))))))) - ((Math.PI) * (0.7725406524822999)))));
+
+ // --- PHENOME 4 ---
+		setTurnRadarRight(((Math.max(((((((Math.random()*2 - 1) > (Math.floor((Math.random()*10))) ? (getHeading()) : (Math.floor((Math.random()*10)))) > ((getY()) > (getWidth()) ? (Math.random()*2 - 1) : (e.getHeadingRadians())) ? (Math.max((Math.random()*2 - 1), (e.getHeadingRadians()))) : ((getHeight()) - (getRadarHeadingRadians()))) + ((getY()) > ((0.001) - (getHeight())) ? (Math.cos((Math.floor((Math.random()*10))))) : (Math.min((getY()), (getEnergy()))))) / (Math.random())) / (getHeadingRadians())), (((e.getHeadingRadians()) - (0.7514908258683642)) / (((((getRadarHeadingRadians()) - (getDistanceRemaining())) + ((Math.floor((Math.random()*10))) == (getVelocity()) ? (0.7451491645870609) : (0.001))) / (getRadarTurnRemainingRadians())) * ((Math.max((0.001), (Math.random()*2 - 1))) - (getRadarTurnRemainingRadians())))))) * (Math.abs(((((Math.asin(((0.06336752945787216) * (0.2054355790100646)))) + (((e.getBearingRadians()) - (Math.random())) - (Math.PI))) / ((((Math.random()) * (Math.random())) - (Math.min((getHeading()), (e.getHeadingRadians())))) * (Math.asin((getHeading()))))) / (getEnergy()))))));
+
+ // --- PHENOME 5 ---
+		setFire(((((getEnergy()) + (Math.min((Math.cos((Math.random()))), (0.001)))) / (((0.9073234585089128) > (Math.floor((Math.random()*10))) ? (Math.PI) : ((Math.random()) / (Math.max((Math.max((getEnergy()), (e.getBearingRadians()))), ((Math.random()*2 - 1) / (Math.random())))))) == ((Math.max((Math.PI), (Math.random()*2 - 1))) > (Math.min((Math.max(((e.getVelocity()) > 0 ? (getY()) : (Math.random())), ((0.4216876785666289) * (Math.PI)))), ((0.4310719008615096) - ((Math.floor((Math.random()*10))) > (0.001) ? (Math.PI) : (Math.random()))))) ? (Math.max((getGunHeadingRadians()), (Math.min(((0.5323660768150216) == (0.001) ? (getY()) : (getHeading())), (getEnergy()))))) : ((Math.PI) > ((Math.min((getY()), (Math.random()))) * ((getRadarHeadingRadians()) * (0.9703127362939301))) ? (getGunHeadingRadians()) : (((Math.random()) + (Math.PI)) == ((getVelocity()) + (0.001)) ? (Math.max((getGunTurnRemainingRadians()), (e.getEnergy()))) : ((Math.floor((Math.random()*10))) - (e.getDistance()))))) ? (Math.asin((((Math.min((getHeadingRadians()), (Math.floor((Math.random()*10))))) + ((e.getVelocity()) - (getX()))) * -1))) : (getHeading()))) * (Math.acos(((getHeading()) == (getGunTurnRemainingRadians()) ? (Math.min((Math.acos(((getVelocity()) > (getRadarHeadingRadians()) ? ((0.001) + (Math.floor((Math.random()*10)))) : (Math.max((Math.random()*2 - 1), (0.001)))))), (Math.floor((Math.random()*10))))) : ((Math.max((e.getHeadingRadians()), (Math.max((Math.random()*2 - 1), (Math.sin((e.getBearingRadians()))))))) > ((e.getDistance()) == ((e.getHeadingRadians()) + ((getY()) + (0.24001513862134294))) ? (Math.sin((Math.max((Math.floor((Math.random()*10))), (getHeight()))))) : (e.getEnergy())) ? (e.getVelocity()) : ((getHeading()) + ((Math.random()) > 0 ? (Math.floor((Math.random()*10))) : ((0.4636319414859521) - (Math.PI))))))))));
+
+	}
+
+}

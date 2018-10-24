@@ -15,10 +15,11 @@ public class RunGP {
 	
 	// all rivals to be trained against
 	final static String[] rivalsBatch1 = {
-		//"sample.SuperCrazy",
+		"sample.Crazy",
+		"sample.Walls",
+		"sample.RamFire",
 		//"sample.SuperTracker"
 		//"sample.SuperTrackFire",
-		"sample.SuperRamFire",
 		//"ary.micro.Weak 1.2"
 		//"sheldor.nano.Sabreur_1.1.1"
 		//"sample.Sabreur"
@@ -31,11 +32,11 @@ public class RunGP {
 	};
 	
 	final static int 
-		POP_SIZE = 300,
+		POP_SIZE = 30,
 		MAX_GENS = 400,
 		MIN_DEPTH = 2,
 		MAX_DEPTH = 7,
-		ROUNDS = 25,
+		ROUNDS = 10,
 		TOURNY_SIZE = 6,
 		BATTLE_HANDICAP = 20;
 	static double 
@@ -43,7 +44,6 @@ public class RunGP {
 		PROB_REPLICATION = 0.05,
 		PROB_MUTATION = 0.1,
 		PROB_ARCHITECTURE = 0.0,
-		
 		PROB_INTERNAL_NODE = 0.9,
 		PROB_ANY_NODE = 0.1,
 		
@@ -78,8 +78,10 @@ public class RunGP {
 		compilePool();
 		
 	
+		System.out.println("Setup inicial completo");
 		// -- EC loop 
 		while(genCount < MAX_GENS){
+			System.out.println("Nova Geração");
 			
 			for(int i = 0; i < POP_SIZE; i++)
 				botNames[i] = pool[i].fileName;
@@ -152,8 +154,11 @@ public class RunGP {
 		System.out.println("Compiling population");
 		for(MetaBot bot : pool){
 			bot.construct();
+			System.out.println("DONE Construct");
 			bot.compile();
+			System.out.println("DONE Compile");
 		}
+		System.out.println("DONE Compiling population");
 	}
 	
 	private static void breedPool(){
@@ -191,6 +196,7 @@ public class RunGP {
 	private static void scoreFitnessOnSet(String[] sampleSet){
 		// generate battle between member and opponents from samples package
 		BattleRunner arena = new BattleRunner();
+		System.out.println("Battle rodando");
 		fitnesses = arena.runBatchWithSamples(botNames, sampleSet, ROUNDS);
 	}
 	

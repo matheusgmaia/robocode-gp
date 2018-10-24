@@ -11,15 +11,15 @@ public class BattleRunner {
 	final static int BATTLE_HANDICAP = RunGP.BATTLE_HANDICAP;
 	
 	public BattleRunner(){
-		engine = new RobocodeEngine(new java.io.File("C:/Robocode"));
+		System.out.println("BATTLE RUNNER RODANDO");
 		battleObserver = new BattleObserver();
+		engine = new RobocodeEngine(new java.io.File("/home/maia/robocode"));
+		engine.setVisible(false); //Olhar a batalha
 		engine.addBattleListener(battleObserver);
-		engine.setVisible(false);
 		battlefield = new BattlefieldSpecification(800, 600);
 	}
 	
 	public double[] runBatchWithSamples(String bots[], String samples[], int rounds){
-		engine = new RobocodeEngine(new java.io.File("C:/Robocode"));
 		double fitnesses[] = new double[bots.length];
 		String bot, opponent;
 		BattleResults[] results;
@@ -32,8 +32,12 @@ public class BattleRunner {
 				opponent = samples[j];
 				
 				RobotSpecification[] selectedBots = engine.getLocalRepository(bot+", "+opponent);
+				System.out.println(bot);
+				System.out.println(opponent);
 				BattleSpecification battleSpec = new BattleSpecification(rounds, battlefield, selectedBots);
 				engine.runBattle(battleSpec, true);
+				
+				
 				
 				results = battleObserver.getResults();
 				int myBot = (results[0].getTeamLeaderName().equals(bots[i]) ? 0 : 1);

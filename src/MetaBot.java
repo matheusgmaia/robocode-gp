@@ -10,9 +10,9 @@ public class MetaBot {
 
 	// Static Variables //////////////////////////////////////////////////////
 	final static 
-		String PATH = new String("C:\\robocode\\robots\\sampleex");
+		String PATH = new String("/home/maia/Documents/ESTUDO/Int Artificial/Projeto/robocode-gp/gp_robots/CURRENT");
 		String PACKAGE = new String("sampleex");
-		String JARS = new String("C:\\robocode\\libs\\robocode.jar;");
+		String JARS = new String("/home/maia/robocode/libs/robocode.jar");
 		
 	final static int 
 		NUM_CHROMOS = 5,
@@ -229,7 +229,7 @@ public class MetaBot {
 	 */
 	String compile(){
 		try{
-			FileWriter fstream = new FileWriter(PATH+"\\"+botName+".java");
+			FileWriter fstream = new FileWriter(PATH+"/"+botName+".java");
 			BufferedWriter out = new BufferedWriter(fstream);
 			out.write(sourceCode);
 			out.close();
@@ -239,11 +239,11 @@ public class MetaBot {
 		
 		// Compile code
 		try {
-			execute("javac -cp " + JARS + " " + PATH + "\\" + botName + ".java");
+			execute("javac -cp " + JARS + " " + PATH + "/" + botName + ".java");
 		}catch(Exception e){
 			e.printStackTrace();
 		}
-		return (PATH+"\\"+botName+".class");
+		return (PATH+"/"+botName+".class");
 	}
 	
 	public static void execute(String command) throws Exception{
@@ -271,8 +271,8 @@ public class MetaBot {
 		
 		for(int i = 0; i < pop; i++){
 			if(i == bestID || gen == 0 && i < 10) continue;
-			oldJava = new File(PATH+"\\"+"X_GPbot_"+gen+"_"+i+".java");
-			oldClass = new File(PATH+"\\"+"X_GPbot_"+gen+"_"+i+".class");
+			oldJava = new File(PATH+"/"+"X_GPbot_"+gen+"_"+i+".java");
+			oldClass = new File(PATH+"/"+"X_GPbot_"+gen+"_"+i+".class");
 			oldJava.delete();
 			oldClass.delete();
 		}
